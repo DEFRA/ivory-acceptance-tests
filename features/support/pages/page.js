@@ -65,7 +65,7 @@ class Page {
         thingToCheck.should.contain(textToCheck);
     }
 
-    doesTextExistSomewhere (textToCheck,elementToCheck) {  // DRY alert: code almost duplicates openElementText.
+    doesTextExistSomewhere (textToCheck,elementToCheck) { // DRY alert: code almost duplicates openElementText.
       winston.info('Attempting to find a "' + elementToCheck + '" containing "' + textToCheck + '"');
       winston.info('elementToCheck + \'*=\' + textToCheck');
       browser.waitUntil(function () { // Check that the element exists first
@@ -101,7 +101,7 @@ class Page {
       var errorText = browser.getText(elementToCheck.toString());
       console.log('Error summary text is: ' + errorText.toString());
       browser.doesTextExistInUniqueElement(textToCheck.toString(),elementToCheck.toString());
-      
+
     }
 
 }
