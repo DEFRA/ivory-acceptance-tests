@@ -1,6 +1,6 @@
 'use strict';
 // This file is copied from data-returns-acceptance-tests.
-// It may contain elements which do not exist in the water abstraction project.
+// It may contain elements which do not exist in the ivory project.
 const winston = require('winston');
 const util = require('util');
 util.inspect.defaultOptions = {depth: null, colors: true};

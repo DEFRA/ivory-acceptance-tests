@@ -1,5 +1,5 @@
 {
-  "name": "water-abs-acceptance-tests",
+  "name": "ivory-acceptance-tests",
   "version": "1.0.0",
   "description": "Acceptance tests project template",
   "private": true,
@@ -28,6 +28,7 @@
     "winston": "2.3.1"
   },
   "devDependencies": {
+    "@wdio/cucumber-framework": "^5.12.3",
     "eslint": "^4.2.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.7.0",

@@ -18,10 +18,10 @@ exports.config = {
     // Specify Test Files
     // ==================
     specs: [
-      './features/google.feature'
+      './features/registration.feature'
     ],
     //exclude: [
-      //'./features/**/google.feature',
+      //'./features/**/registration.feature',
       //'./features/**/checklinks.feature'
     //],
 

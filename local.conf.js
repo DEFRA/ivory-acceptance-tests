@@ -22,7 +22,7 @@ const localConfig = {
     // with "/", then the base url gets prepended.
     // If authentication is required then add a username and password between https:// and the rest of the URL.  Separate username and password with : and replace any spaces with %20.
 
-    baseUrl: process.env.SERVICE_URL || 'http://www.google.com',
+    baseUrl: process.env.SERVICE_URL || 'https://ivy-dev.aws.defra.cloud',
 
     // Test runner services
     // Services take over a specific job you don't want to take care of. They enhance
