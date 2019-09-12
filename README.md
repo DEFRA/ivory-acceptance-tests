@@ -1,11 +1,11 @@
-# README for Water Abstraction Acceptance Tests (water-abs-acceptance-tests)
+# README for Ivory Acceptance Tests (ivory-acceptance-tests)
 
 ## Description
 
 This Node.JS repository is not currently being maintained.  It is replaced by:
-https://github.com/DEFRA/water-abstraction-acceptance-tests which uses Ruby, Capybara and SitePrism.
+https://github.com/DEFRA/ivory-acceptance-tests which uses Selenium Webdriver IO.
 
-This is a basic automated test suite for Water Abstraction using Node.JS, Webdriver.io, Selenium, Browserstack and Cucumber.  It borrows heavily from Data Returns Acceptance Tests.
+This is a basic automated test suite for Ivory using Node.JS, Webdriver.io, Selenium, Browserstack and Cucumber.  It borrows heavily from Water Abstraction Acceptance Tests.
 
 ### Prerequisites (for Mac)
 
@@ -30,7 +30,7 @@ This is a basic automated test suite for Water Abstraction using Node.JS, Webdri
 First, clone the project from GitHub
 
 ```bash
-$ git clone https://github.com/EnvironmentAgency/water-abs-acceptance-tests.git
+$ git clone https://github.com/DEFRA/ivory-acceptance-tests 
 ```
 
 To install key project dependencies, open terminal inside the root folder of git repository and run:
