@@ -9,9 +9,9 @@ Feature: First test
    Then I should be presented with description page
    When I enter a description
    And click Continue button
-   Then I should be presented with owner email address page
-   When I enter a valid email Id
-   And click Continue button
+#   Then I should be presented with owner email address page
+#   When I enter a valid email Id
+#   And click Continue button
 #   Then I should be presented with "owner name" page
 #   When I enter a valid name
 #   And click Continue button
