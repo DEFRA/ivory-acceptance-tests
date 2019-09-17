@@ -1,8 +1,11 @@
 
 Feature: Registration Journey
+  As a tester
+  I want to check the Registration journey functionality
+  So that I know that it works and is secure
 
-
- Scenario: Registration scenario
+@wip
+ Scenario: Registration Happy Path
    Given I go to item type page
    Then I select a item type
    And click Continue button
@@ -24,5 +27,6 @@ Feature: Registration Journey
    Then I should be presented with summary page
    And click Confirm and continue button
    Then I should be presented with confirmation page
+
 
 

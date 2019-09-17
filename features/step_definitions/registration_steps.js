@@ -17,30 +17,55 @@ module.exports = function () {
         browser.pause(process.env.WAIT_TIME);
     });
 
+    this.Then('I should see error message in item type page', function () {
+        itemTypePage.checkOpen()
+        browser.pause(1000)
+    });
+
     this.Then('I select a item type', function () {
         itemTypePage.clickSomething('#itemType-2')
         browser.pause(1000)
     });
+
     this.Then('click Continue button', function () {
         itemTypePage.clickSomething('.govuk-button')
     });
+
     this.Then('I should be presented with description page', function () {
         itemDescPage.checkOpen()
+    });
+
+    this.Then('I should see error message in description page', function () {
+        itemDescPage.checkOpen()
+        browser.pause(1000)
     });
 
     this.When('I enter a description', function () {
         itemDescPage.enterFormText('#item-description','Automation Functional Test')
         browser.pause(1000)
     });
+
     this.Then('I should be presented with owner email address page', function () {
         ownerEmail.checkOpen()
     });
+
+    this.Then('I should see error message in owner email address page', function () {
+        ownerEmail.checkOpen()
+        browser.pause(1000)
+    });
+
     this.Then('I enter a valid email Id', function () {
         ownerEmail.enterFormText('#email', 'joe.blog@test.com')
         browser.pause(1000)
     });
+
     this.Then('I should be presented with owner name page', function () {
         ownerName.checkOpen()
+    });
+
+    this.Then('I should see error message in owner name page', function () {
+        ownerName.checkOpen()
+        browser.pause(1000)
     });
 
     this.Then('I enter a valid name', function () {
@@ -51,6 +76,12 @@ module.exports = function () {
     this.Then('I should be presented with owner address page', function () {
         ownerAddress.checkOpen()
     });
+
+    this.Then('I should see error message in owner address page', function () {
+        ownerAddress.checkOpen()
+        browser.pause(1000)
+    });
+
     this.Then('I enter valid full details', function () {
         ownerAddress.enterFormText('#address-line-1','Ivory Functional Test')
         ownerAddress.enterFormText('#address-line-2','Automation address')
@@ -59,21 +90,31 @@ module.exports = function () {
         ownerAddress.enterFormText('#address-postcode','L3 3EE')
         browser.pause(1500)
     });
+
     this.Then('I should be presented with dealing intent page', function () {
         dealingIntent.checkOpen()
         browser.pause(1500)
     });
+
+    this.Then('I should see error message in dealing intent page', function () {
+        dealingIntent.checkOpen()
+        browser.pause(1000)
+    });
+
     this.Then('I select an intent', function () {
         dealingIntent.clickSomething('#dealingIntent-1')
     });
+
     this.Then('I should be presented with summary page', function () {
         checkYourAnswer.checkOpen()
         browser.pause(1000)
     });
+
     this.Then('click Confirm and continue button', function () {
         itemTypePage.clickSomething('.govuk-button')
         browser.pause(1000)
     });
+
     this.Then('I should be presented with confirmation page', function () {
         registrationConfirmation.checkOpen()
         browser.pause(1000)

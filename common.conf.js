@@ -18,7 +18,8 @@ exports.config = {
     // Specify Test Files
     // ==================
     specs: [
-      './features/registration.feature'
+      './features/registration.feature',
+     './features/registrationError.feature'
     ],
     //exclude: [
       //'./features/**/registration.feature',
@@ -91,7 +92,7 @@ exports.config = {
         source: true, // <boolean> hide source uris
         profile: [], // <string[]> (name) specify the profile to use
         strict: true, // <boolean> fail if there are any undefined or pending steps
-        tags: [], // <string[]> (expression) only execute the features or scenarios with tags matching the expression
+        tags: ['@wip'], // <string[]> (expression) only execute the features or scenarios with tags matching the expression
         timeout: 60000, // <number> timeout for step definitions
         ignoreUndefinedDefinitions: false // <boolean> Enable this config to treat undefined definitions as warnings.
     },
@@ -226,6 +227,8 @@ exports.config = {
     },
     beforeScenario: function (scenario) {
         winston.info(`Running scenario: ${scenario.getName()}`);
+    },
+    onComplete: function (exitCode, config, capabilities, results) {
     }
     // beforeStep: function (step) {
     // },
