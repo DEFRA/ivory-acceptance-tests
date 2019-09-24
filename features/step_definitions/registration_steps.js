@@ -10,7 +10,9 @@ const ownerName = require('../support/pages/ownerName.js');
 const ownerAddress = require('../support/pages/ownerAddress');
 const dealingIntent = require('../support/pages/dealingIntent');
 const checkYourAnswer = require('../support/pages/checkYourAnswer');
-const registrationConfirmation = require('../support/pages/registrationConfirmation')
+const registrationConfirmation = require('../support/pages/registrationConfirmation');
+const payment = require('../support/pages/paymentPage');
+const confirmPayment = require('../support/pages/confirmPayment')
 module.exports = function () {
     this.Given('I go to item type page', function () {
         itemTypePage.open()
@@ -115,8 +117,41 @@ module.exports = function () {
         browser.pause(1000)
     });
 
+    this.Then('I should be presented with payments page', function () {
+        payment.checkOpen()
+        browser.pause(1000)
+    });
+
+    this.Then('I should see error message in payments page', function () {
+        payment.checkOpen()
+        browser.pause(1000)
+    });
+
+    this.Then('I enter valid details', function () {
+        payment.enterFormText('#card-no', '4242424242424242')
+        payment.enterFormText('#expiry-month', '01')
+        payment.enterFormText('#expiry-year', '29')
+        payment.enterFormText('#cardholder-name', 'MR Automation Ivory')
+        payment.enterFormText('#cvc', '299')
+        payment.enterFormText('#address-line-1', '29')
+        payment.enterFormText('#address-line-2', 'Downing Street')
+        payment.enterFormText('#address-city', 'London')
+        payment.enterFormText('#address-postcode', 'S1 2WW')
+
+        browser.pause(1000)
+    });
+
+    this.Then('I should be presented with payment confirm page', function () {
+        confirmPayment.checkOpen()
+        browser.pause(1000)
+    });
+
+    this.Then('click Confirm payment button', function () {
+        itemTypePage.clickSomething('.govuk-button')
+        browser.pause(1000)
+    });
     this.Then('I should be presented with confirmation page', function () {
-        registrationConfirmation.checkOpen()
+         registrationConfirmation.checkOpen()
         browser.pause(1000)
     });
 };

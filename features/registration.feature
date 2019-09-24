@@ -26,7 +26,12 @@ Feature: Registration Journey
    And click Continue button
    Then I should be presented with summary page
    And click Confirm and continue button
-   Then I should be presented with confirmation page
+   Then I should be presented with payments page
+   And I enter valid details
+   Then click Continue button
+   And I should be presented with payment confirm page
+   Then click Confirm payment button
+   And I should be presented with confirmation page
 
 
 
