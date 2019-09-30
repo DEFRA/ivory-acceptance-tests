@@ -25,6 +25,18 @@ class Page {
         return browser.getUrl().includes(this.url);
     }
 
+    isSelected () {
+        client.addCommand('checkBox', function(selector, state, callback) {
+            this.isSelected(selector, function(err, isSelected) {
+                if(isSelected !== state) {
+                    client.click(selector);
+                }
+            });
+            callback();
+        });
+    }
+
+
     checkOpen () {
         if (!this.isOpen()) {
             winston.debug(`Page.checkOpen waiting for browser URL ${browser.getUrl()} to match ${this.url}`);

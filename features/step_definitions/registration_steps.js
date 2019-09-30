@@ -12,7 +12,10 @@ const dealingIntent = require('../support/pages/dealingIntent');
 const checkYourAnswer = require('../support/pages/checkYourAnswer');
 const registrationConfirmation = require('../support/pages/registrationConfirmation');
 const payment = require('../support/pages/paymentPage');
-const confirmPayment = require('../support/pages/confirmPayment')
+const confirmPayment = require('../support/pages/confirmPayment');
+const ageExemption = require('../support/pages/ageExemption');
+const volumeExemption = require('../support/pages/volumeExemption')
+
 module.exports = function () {
     this.Given('I go to item type page', function () {
         itemTypePage.open()
@@ -44,6 +47,51 @@ module.exports = function () {
 
     this.When('I enter a description', function () {
         itemDescPage.enterFormText('#item-description','Automation Functional Test')
+        browser.pause(1000)
+    });
+
+    this.Then('I should be presented with age exemption page', function () {
+        ageExemption.checkOpen()
+        browser.pause(1000)
+    });
+
+    this.When('I enter a description in age exemption page', function () {
+        ageExemption.enterFormText('#description','Age Exemption Automation Functional Test')
+        browser.pause(1000)
+    });
+
+    this.Then('I should see error message in age exemption page', function () {
+        ageExemption.checkOpen()
+        browser.pause(1000)
+    });
+
+    this.When('I select the age declaration', function () {
+        const checkboxesLabels = browser.elements('#declaration-1');
+        checkboxesLabels.value.forEach((label) => label.click());
+        // const selectBox = $('#declaration-1');
+        // selectBox.selectByVisibleText('I declare the item was made before 1947');
+        // ageExemption.isSelected('#declaration-1')
+        browser.pause(1000)
+    });
+
+    this.Then('I should be presented with volume exemption page', function () {
+        volumeExemption.checkOpen()
+        browser.pause(1000)
+    });
+
+    this.Then('I should see error message in volume exemption page', function () {
+        volumeExemption.checkOpen()
+        browser.pause(1000)
+    });
+
+    this.When('I select the volume declaration', function () {
+        const checkboxesLabels = browser.elements('#declaration-1');
+        checkboxesLabels.value.forEach((label) => label.click());
+        browser.pause(1000)
+    });
+
+    this.When('I enter a description in volume exemption page', function () {
+        volumeExemption.enterFormText('#description','Volume Exemption Automation Functional Test')
         browser.pause(1000)
     });
 

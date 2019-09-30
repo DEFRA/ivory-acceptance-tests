@@ -12,6 +12,14 @@ Feature: Registration Journey
    Then I should be presented with description page
    When I enter a description
    And click Continue button
+   Then I should be presented with age exemption page
+   When I select the age declaration
+   Then I enter a description in age exemption page
+   And click Continue button
+   Then I should be presented with volume exemption page
+   When I select the volume declaration
+   Then I enter a description in volume exemption page
+   And click Continue button
    Then I should be presented with owner email address page
    When I enter a valid email Id
    And click Continue button
