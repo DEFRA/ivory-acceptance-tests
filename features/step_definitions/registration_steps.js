@@ -1,7 +1,7 @@
 'use strict';
 // eslint-disable-next-line no-unused-vars
 require('winston');
-const {Given, Then, When} = require('cucumber');
+const {Given, Then, When, And} = require('cucumber');
 const expect = require('chai').expect;
 const itemTypePage = require('../support/pages/itemType.js');
 const itemDescPage = require('../support/pages/itemDescription.js');
@@ -17,7 +17,10 @@ const ageExemption = require('../support/pages/ageExemption');
 const volumeExemption = require('../support/pages/volumeExemption');
 const addPhotograph = require('../support/pages/addPhotograph');
 const thisIsYourPhoto = require('../support/pages/thisIsYourPhoto');
-const whoOwnsItem = require('../support/pages/whoOwnsItem')
+const whoOwnsItem = require('../support/pages/whoOwnsItem');
+const contactName = require('../support/pages/contactName');
+const agentAddress = require('../support/pages/agentAddress');
+const agentEmail = require('../support/pages/agentEmail')
 
 module.exports = function () {
     this.Given('I go to item type page', function () {
@@ -32,6 +35,11 @@ module.exports = function () {
 
     this.Then('I select a item type', function () {
         itemTypePage.clickSomething('#itemType-1')
+        browser.pause(1000)
+    });
+
+    this.Then('I select a item type 2', function () {
+        itemTypePage.clickSomething('#itemType-2')
         browser.pause(1000)
     });
 
@@ -51,11 +59,6 @@ module.exports = function () {
 
     this.When('I choose file in add photograph page', function () {
         browser.chooseFile('#photograph', '/Users/harish/Desktop/application/ivory-acceptance-tests/features/testFile/Ivory1.jpeg')
-        // const path = require('path');
-        // const filePath = path.join(__dirname, '..', 'testFile', 'Ivory1.jpeg');
-        //
-        // const remoteFilePath = browser.uploadFile(filePath);
-        // $('photograph').setValue(remoteFilePath);
         browser.pause(1000)
     });
 
@@ -101,9 +104,6 @@ module.exports = function () {
     this.When('I select the age declaration', function () {
         const checkboxesLabels = browser.elements('#declaration-1');
         checkboxesLabels.value.forEach((label) => label.click());
-        // const selectBox = $('#declaration-1');
-        // selectBox.selectByVisibleText('I declare the item was made before 1947');
-        // ageExemption.isSelected('#declaration-1')
         browser.pause(1000)
     });
 
@@ -143,8 +143,17 @@ module.exports = function () {
         browser.pause(1000)
     });
 
+    this.Then('I select agent', function () {
+        whoOwnsItem.clickSomething('#ownerType-2')
+        browser.pause(1000)
+    });
+
     this.Then('I should be presented with owner email address page', function () {
         ownerEmail.checkOpen()
+    });
+
+    this.Then('I should be presented with your email address page', function () {
+        agentEmail.checkOpen()
     });
 
     this.Then('I should see error message in owner email address page', function () {
@@ -159,6 +168,10 @@ module.exports = function () {
 
     this.Then('I should be presented with owner name page', function () {
         ownerName.checkOpen()
+    });
+
+    this.Then('I should be presented with contact name page', function () {
+        contactName.checkOpen()
     });
 
     this.Then('I should see error message in owner name page', function () {
@@ -186,6 +199,20 @@ module.exports = function () {
         ownerAddress.enterFormText('#address-town','London')
         ownerAddress.enterFormText('#address-county','Essex')
         ownerAddress.enterFormText('#address-postcode','L3 3EE')
+        browser.pause(1500)
+    });
+
+    this.Then('I should be presented with your address page', function () {
+       agentAddress.checkOpen()
+    });
+
+    this.Then('I enter valid full address', function () {
+        agentAddress.enterFormText('#business-name','Agent Journey Automation')
+        agentAddress.enterFormText('#address-line-1','Agent Building')
+        agentAddress.enterFormText('#address-line-2','Automation address')
+        agentAddress.enterFormText('#address-town','London')
+        agentAddress.enterFormText('#address-county','Sussex')
+        agentAddress.enterFormText('#address-postcode','SW3 3EE')
         browser.pause(1500)
     });
 

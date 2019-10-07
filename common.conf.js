@@ -19,7 +19,8 @@ exports.config = {
     // ==================
     specs: [
       './features/registrationMusicalOwner.feature',
-     './features/registrationOwnerJourneyError.feature'
+     './features/registrationOwnerJourneyError.feature',
+     './features/registrationAgentJourney.feature'
     ],
     //exclude: [
       //'./features/**/registrationMusicalOwner.feature',
