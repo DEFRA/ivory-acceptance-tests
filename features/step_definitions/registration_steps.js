@@ -14,7 +14,10 @@ const registrationConfirmation = require('../support/pages/registrationConfirmat
 const payment = require('../support/pages/paymentPage');
 const confirmPayment = require('../support/pages/confirmPayment');
 const ageExemption = require('../support/pages/ageExemption');
-const volumeExemption = require('../support/pages/volumeExemption')
+const volumeExemption = require('../support/pages/volumeExemption');
+const addPhotograph = require('../support/pages/addPhotograph');
+const thisIsYourPhoto = require('../support/pages/thisIsYourPhoto');
+const whoOwnsItem = require('../support/pages/whoOwnsItem')
 
 module.exports = function () {
     this.Given('I go to item type page', function () {
@@ -28,7 +31,7 @@ module.exports = function () {
     });
 
     this.Then('I select a item type', function () {
-        itemTypePage.clickSomething('#itemType-2')
+        itemTypePage.clickSomething('#itemType-1')
         browser.pause(1000)
     });
 
@@ -36,8 +39,33 @@ module.exports = function () {
         itemTypePage.clickSomething('.govuk-button')
     });
 
+    this.Then('I should be presented with add photograph page', function () {
+        addPhotograph.checkOpen()
+        browser.pause(1000)
+    });
+
+    this.When('I choose file in add photograph page', function () {
+        browser.chooseFile('#photograph', '/Users/harish/Desktop/application/ivory-acceptance-tests/features/testFile/Ivory1.jpeg')
+        // const path = require('path');
+        // const filePath = path.join(__dirname, '..', 'testFile', 'Ivory1.jpeg');
+        //
+        // const remoteFilePath = browser.uploadFile(filePath);
+        // $('photograph').setValue(remoteFilePath);
+        browser.pause(1000)
+    });
+
+    this.Then('I should be presented with this is your photo page', function () {
+        thisIsYourPhoto.checkOpen()
+        browser.pause(1000)
+    });
+
+    this.Then('click Use this photo', function () {
+        thisIsYourPhoto.clickSomething('.govuk-button')
+    });
+
     this.Then('I should be presented with description page', function () {
         itemDescPage.checkOpen()
+        browser.pause(1000)
     });
 
     this.Then('I should see error message in description page', function () {
@@ -92,6 +120,16 @@ module.exports = function () {
 
     this.When('I enter a description in volume exemption page', function () {
         volumeExemption.enterFormText('#description','Volume Exemption Automation Functional Test')
+        browser.pause(1000)
+    });
+
+    this.Then('I should be presented with who owns the item page', function () {
+        whoOwnsItem.checkOpen()
+        browser.pause(1000)
+    });
+
+    this.Then('I select owner', function () {
+        whoOwnsItem.clickSomething('#ownerType-1')
         browser.pause(1000)
     });
 

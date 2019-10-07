@@ -18,11 +18,11 @@ exports.config = {
     // Specify Test Files
     // ==================
     specs: [
-      './features/registration.feature',
-     './features/registrationError.feature'
+      './features/registrationMusicalOwner.feature',
+     './features/registrationOwnerJourneyError.feature'
     ],
     //exclude: [
-      //'./features/**/registration.feature',
+      //'./features/**/registrationMusicalOwner.feature',
       //'./features/**/checklinks.feature'
     //],
 

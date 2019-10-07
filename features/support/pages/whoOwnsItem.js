@@ -3,7 +3,7 @@ const winston = require('winston');
 const Page = require('./page');
 class itemType extends Page {
     get url () {
-        return '/add-photograph';
+        return '/who-owns-item';
     }
 }
 
