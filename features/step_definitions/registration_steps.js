@@ -44,6 +44,11 @@ module.exports = function () {
         browser.pause(1000)
     });
 
+    this.Then('I should see error message in add photograph page', function () {
+        addPhotograph.checkOpen()
+        browser.pause(1000)
+    });
+
     this.When('I choose file in add photograph page', function () {
         browser.chooseFile('#photograph', '/Users/harish/Desktop/application/ivory-acceptance-tests/features/testFile/Ivory1.jpeg')
         // const path = require('path');
@@ -124,6 +129,11 @@ module.exports = function () {
     });
 
     this.Then('I should be presented with who owns the item page', function () {
+        whoOwnsItem.checkOpen()
+        browser.pause(1000)
+    });
+
+    this.Then('I should see error message in who owns the item page', function () {
         whoOwnsItem.checkOpen()
         browser.pause(1000)
     });
