@@ -1,13 +1,13 @@
 
-Feature: Registration Agent Journey
+Feature: Registration Museum Journey
   As a tester
-  I want to check the Registration Agent journey functionality
+  I want to check the Registration Museum journey functionality
   So that I know that it works and is secure
 
 @wip
- Scenario: Registration Agent Journey
+ Scenario: Registration Museum Journey
    Given I go to item type page
-   Then I select a item type 2
+   Then I select a item type 4
    And click Continue button
    Then I should be presented with add photograph page
    When I choose file in add photograph page
@@ -17,25 +17,8 @@ Feature: Registration Agent Journey
    Then I should be presented with description page
    When I enter a description
    And click Continue button
-   Then I should be presented with age exemption page
-   When I select the age declaration
-   Then I enter a description in age exemption page
-   And click Continue button
-   Then I should be presented with volume exemption page
-   When I select the volume declaration
-   Then I enter a description in volume exemption page
-   And click Continue button
    Then I should be presented with who owns the item page
-   When I select agent
-   And click Continue button
-   Then I should be presented with contact name page
-   When I enter a valid name
-   And click Continue button
-   Then I should be presented with your address page
-   When I enter valid full address
-   And click Continue button
-   Then I should be presented with your email address page
-   When I enter a valid agent email Id
+   When I select owner
    And click Continue button
    Then I should be presented with owner name page
    When I enter a valid name
