@@ -25,32 +25,32 @@ const agentEmail = require('../support/pages/agentEmail');
 module.exports = function () {
     this.Given('I go to item type page', function () {
         itemTypePage.open();
-        browser.pause(process.env.WAIT_TIME);
+        (process.env.WAIT_TIME);
     });
 
     this.Then('I should see error message in item type page', function () {
         itemTypePage.checkOpen();
-        browser.pause(1000)
+
     });
 
     this.Then('I select a item type', function () {
         itemTypePage.clickSomething('#itemType-1');
-        browser.pause(1000)
+
     });
 
     this.Then('I select a item type 2', function () {
         itemTypePage.clickSomething('#itemType-2');
-        browser.pause(1000)
+
     });
 
     this.Then('I select a item type 3', function () {
         itemTypePage.clickSomething('#itemType-3');
-        browser.pause(1000)
+
     });
 
     this.Then('I select a item type 4', function () {
         itemTypePage.clickSomething('#itemType-4');
-        browser.pause(1000)
+
     });
 
     this.Then('click Continue button', function () {
@@ -59,22 +59,22 @@ module.exports = function () {
 
     this.Then('I should be presented with add photograph page', function () {
         addPhotograph.checkOpen();
-        browser.pause(1000)
+
     });
 
     this.Then('I should see error message in add photograph page', function () {
         addPhotograph.checkOpen();
-        browser.pause(1000)
+
     });
 
     this.When('I choose file in add photograph page', function () {
         browser.chooseFile('#photograph', '/Users/harish/Desktop/application/ivory-acceptance-tests/features/testFile/Ivory1.jpeg')
-        browser.pause(1000)
+
     });
 
     this.Then('I should be presented with this is your photo page', function () {
         thisIsYourPhoto.checkOpen();
-        browser.pause(1000)
+
     });
 
     this.Then('click Use this photo', function () {
@@ -83,79 +83,79 @@ module.exports = function () {
 
     this.Then('I should be presented with description page', function () {
         itemDescPage.checkOpen();
-        browser.pause(1000)
+
     });
 
     this.Then('I should see error message in description page', function () {
         itemDescPage.checkOpen();
-        browser.pause(1000)
+
     });
 
     this.When('I enter a description', function () {
         itemDescPage.enterFormText('#item-description','Automation Functional Test')
-        browser.pause(1000)
+
     });
 
     this.Then('I should be presented with age exemption page', function () {
         ageExemption.checkOpen();
-        browser.pause(1000)
+
     });
 
     this.When('I enter a description in age exemption page', function () {
         ageExemption.enterFormText('#description','Age Exemption Automation Functional Test')
-        browser.pause(1000)
+
     });
 
     this.Then('I should see error message in age exemption page', function () {
         ageExemption.checkOpen();
-        browser.pause(1000)
+
     });
 
     this.When('I select the age declaration', function () {
         const checkboxesLabels = browser.elements('#declaration-1');
         checkboxesLabels.value.forEach((label) => label.click());
-        browser.pause(1000)
+
     });
 
     this.Then('I should be presented with volume exemption page', function () {
         volumeExemption.checkOpen();
-        browser.pause(1000)
+
     });
 
     this.Then('I should see error message in volume exemption page', function () {
         volumeExemption.checkOpen();
-        browser.pause(1000)
+
     });
 
     this.When('I select the volume declaration', function () {
         const checkboxesLabels = browser.elements('#declaration-1');
         checkboxesLabels.value.forEach((label) => label.click());
-        browser.pause(1000)
+
     });
 
     this.When('I enter a description in volume exemption page', function () {
         volumeExemption.enterFormText('#description','Volume Exemption Automation Functional Test');
-        browser.pause(1000)
+
     });
 
     this.Then('I should be presented with who owns the item page', function () {
         whoOwnsItem.checkOpen();
-        browser.pause(1000)
+
     });
 
     this.Then('I should see error message in who owns the item page', function () {
         whoOwnsItem.checkOpen();
-        browser.pause(1000)
+
     });
 
     this.Then('I select owner', function () {
         whoOwnsItem.clickSomething('#ownerType-1');
-        browser.pause(1000)
+
     });
 
     this.Then('I select agent', function () {
         whoOwnsItem.clickSomething('#ownerType-2');
-        browser.pause(1000)
+
     });
 
     this.Then('I should be presented with owner email address page', function () {
@@ -168,22 +168,22 @@ module.exports = function () {
 
     this.Then('I should see error message in your email address page', function () {
         agentEmail.checkOpen();
-        browser.pause(1000)
+
     });
 
     this.Then('I enter a valid agent email Id', function () {
         agentEmail.enterFormText('#email', 'james.bond@agent007.com');
-        browser.pause(1000)
+
     });
 
     this.Then('I should see error message in owner email address page', function () {
         ownerEmail.checkOpen();
-        browser.pause(1000)
+
     });
 
     this.Then('I enter a valid email Id', function () {
         ownerEmail.enterFormText('#email', 'joe.blog@test.com');
-        browser.pause(1000)
+
     });
 
     this.Then('I should be presented with owner name page', function () {
@@ -196,18 +196,18 @@ module.exports = function () {
 
     this.Then('I should see error message in owner name page', function () {
         ownerName.checkOpen();
-        browser.pause(1000)
+
     });
 
     this.Then('I should see error message in contact name page', function () {
         contactName.checkOpen();
-        browser.pause(1000)
+
     });
 
     this.Then('I enter a valid name', function () {
         ownerName.enterFormText('#full-name','Bruce lee');
         contactName.enterFormText('#full-name', 'Agent James Bond 007');
-        browser.pause(1000)
+
     });
 
     this.Then('I should be presented with owner address page', function () {
@@ -216,7 +216,7 @@ module.exports = function () {
 
     this.Then('I should see error message in owner address page', function () {
         ownerAddress.checkOpen();
-        browser.pause(1000)
+
     });
 
     this.Then('I enter valid full details', function () {
@@ -225,7 +225,7 @@ module.exports = function () {
         ownerAddress.enterFormText('#address-town','Bristol');
         ownerAddress.enterFormText('#address-county','Essex');
         ownerAddress.enterFormText('#address-postcode','B3 3EE');
-        browser.pause(1500)
+
     });
 
     this.Then('I should be presented with your address page', function () {
@@ -234,7 +234,7 @@ module.exports = function () {
 
     this.Then('I should see error message in your address page', function () {
         agentAddress.checkOpen();
-        browser.pause(1000)
+
     });
 
     this.Then('I enter valid full address', function () {
@@ -244,17 +244,17 @@ module.exports = function () {
         agentAddress.enterFormText('#address-town','London');
         agentAddress.enterFormText('#address-county','Sussex');
         agentAddress.enterFormText('#address-postcode','SW3 3EE');
-        browser.pause(1500)
+
     });
 
     this.Then('I should be presented with dealing intent page', function () {
         dealingIntent.checkOpen();
-        browser.pause(1500)
+
     });
 
     this.Then('I should see error message in dealing intent page', function () {
         dealingIntent.checkOpen();
-        browser.pause(1000)
+
     });
 
     this.Then('I select an intent', function () {
@@ -263,22 +263,22 @@ module.exports = function () {
 
     this.Then('I should be presented with summary page', function () {
         checkYourAnswer.checkOpen();
-        browser.pause(1000)
+
     });
 
     this.Then('click Confirm and continue button', function () {
         itemTypePage.clickSomething('.govuk-button');
-        browser.pause(1000)
+
     });
 
     this.Then('I should be presented with payments page', function () {
         payment.checkOpen();
-        browser.pause(1000)
+
     });
 
     this.Then('I should see error message in payments page', function () {
         payment.checkOpen();
-        browser.pause(1000)
+
     });
 
     this.Then('I enter valid details', function () {
@@ -292,21 +292,21 @@ module.exports = function () {
         payment.enterFormText('#address-city', 'London');
         payment.enterFormText('#address-postcode', 'S1 2WW');
 
-        browser.pause(1000)
+
     });
 
     this.Then('I should be presented with payment confirm page', function () {
         confirmPayment.checkOpen();
-        browser.pause(1000)
+
     });
 
     this.Then('click Confirm payment button', function () {
         itemTypePage.clickSomething('.govuk-button');
-        browser.pause(1000)
+
     });
     this.Then('I should be presented with confirmation page', function () {
          registrationConfirmation.checkOpen();
-        browser.pause(1000)
+
     });
 };
 
