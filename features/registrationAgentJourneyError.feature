@@ -65,11 +65,11 @@ Feature: Registration Journey
      Then I should see error message in owner address page
      When I enter valid full details
      And click Continue button
-     Then I should be presented with owner email address page
-     When click Continue button
-     Then I should see error message in owner email address page
-     When I enter a valid email Id
-     And click Continue button
+#     Then I should be presented with owner email address page
+#     When click Continue button
+#     Then I should see error message in owner email address page
+#     When I enter a valid email Id
+#     And click Continue button
      Then I should be presented with dealing intent page
      When click Continue button
      Then I should see error message in dealing intent page

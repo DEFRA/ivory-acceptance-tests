@@ -43,9 +43,9 @@ Feature: Registration Agent Journey
    Then I should be presented with owner address page
    When I enter valid full details
    And click Continue button
-   Then I should be presented with owner email address page
-   When I enter a valid email Id
-   And click Continue button
+#   Then I should be presented with owner email address page
+#   When I enter a valid email Id
+#   And click Continue button
    Then I should be presented with dealing intent page
    When I select an intent
    And click Continue button
