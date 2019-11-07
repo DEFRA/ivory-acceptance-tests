@@ -34,7 +34,7 @@ module.exports = function () {
     });
 
     this.Then('I select a item type', function () {
-        itemTypePage.clickSomething('#itemType-1');
+        itemTypePage.clickSomething('#itemType');
 
     });
 
@@ -112,7 +112,7 @@ module.exports = function () {
     });
 
     this.When('I select the age declaration', function () {
-        const checkboxesLabels = browser.elements('#declaration-1');
+        const checkboxesLabels = browser.elements('#declaration');
         checkboxesLabels.value.forEach((label) => label.click());
 
     });
@@ -128,7 +128,7 @@ module.exports = function () {
     });
 
     this.When('I select the volume declaration', function () {
-        const checkboxesLabels = browser.elements('#declaration-1');
+        const checkboxesLabels = browser.elements('#declaration');
         checkboxesLabels.value.forEach((label) => label.click());
 
     });
@@ -149,7 +149,7 @@ module.exports = function () {
     });
 
     this.Then('I select owner', function () {
-        whoOwnsItem.clickSomething('#ownerType-1');
+        whoOwnsItem.clickSomething('#ownerType');
 
     });
 
@@ -258,7 +258,7 @@ module.exports = function () {
     });
 
     this.Then('I select an intent', function () {
-        dealingIntent.clickSomething('#dealingIntent-1')
+        dealingIntent.clickSomething('#dealingIntent')
     });
 
     this.Then('I should be presented with summary page', function () {
