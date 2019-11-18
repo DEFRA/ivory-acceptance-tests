@@ -4,7 +4,7 @@ Feature: Registration Agent Journey
   I want to check the Registration Agent journey functionality
   So that I know that it works and is secure
 
-@wip
+@wip @zap
  Scenario: Registration Agent Journey
    Given I go to item type page
    Then I select a item type 2

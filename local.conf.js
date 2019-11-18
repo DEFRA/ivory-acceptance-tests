@@ -1,6 +1,7 @@
 'use strict';
 const lodash = require('lodash');
 const commonConfig = require('./common.conf').config;
+var proxy = "http://zap:8090";
 
 const localConfig = {
     // ============
@@ -11,8 +12,15 @@ const localConfig = {
     capabilities: [
         {
             browserName: 'chrome',
-            maxInstances: 3
-        }
+            maxInstances: 3,
+            proxy: {
+                        httpProxy: proxy,
+                        sslProxy: proxy,
+                        ftpProxy: proxy,
+                        proxyType: "MANUAL",
+                        autodetect: false
+                    }
+        },
     ],
 
     // ===================

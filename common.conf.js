@@ -95,7 +95,7 @@ exports.config = {
         source: true, // <boolean> hide source uris
         profile: [], // <string[]> (name) specify the profile to use
         strict: true, // <boolean> fail if there are any undefined or pending steps
-        tags: ['@wip'], // <string[]> (expression) only execute the features or scenarios with tags matching the expression
+        tags: ['@zap'], // <string[]> (expression) only execute the features or scenarios with tags matching the expression
         timeout: 60000, // <number> timeout for step definitions
         ignoreUndefinedDefinitions: false // <boolean> Enable this config to treat undefined definitions as warnings.
     },
