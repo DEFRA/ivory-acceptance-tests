@@ -1,6 +1,9 @@
 {
   "name": "ivory-acceptance-tests",
   "version": "1.0.0",
+    "engines": {
+    "node": "10.x"
+  },
   "description": "Acceptance tests project template",
   "private": true,
   "main": "index.js",
