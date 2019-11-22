@@ -9,7 +9,7 @@
   "main": "index.js",
   "scripts": {
     "start": "selenium-standalone start",
-		"selenium": "selenium-standalone",
+    "selenium": "selenium-standalone",
     "test": "./node_modules/.bin/wdio ./local.conf.js",
     "ci": "./node_modules/.bin/wdio ./jenkins.conf.js",
     "bstest": "./node_modules/.bin/wdio ./browserstack.conf.js",
@@ -25,7 +25,7 @@
     "path": "0.12.7",
     "request": "2.81.0",
     "selenium-standalone": "^5.9.1",
-		"wdio-selenium-standalone-service": "^0.0.7"
+    "wdio-selenium-standalone-service": "^0.0.7",
     "wdio-browserstack-service": "0.1.11",
     "wdio-firefox-profile-service": "0.0.3",
     "wdio-junit-reporter": "^0.4.4",
