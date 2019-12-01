@@ -68,18 +68,9 @@ const agentEmail = require('../support/pages/agentEmail');
     });
 
     When('I choose file in add photograph page', function () {
-        //browser.chooseFile('#photograph', '/Users/harish/Desktop/application/ivory-acceptance-tests/features/testFile/Ivory1.jpeg');
-        //browser.chooseFile('#photograph', '/features/testFile/Ivory1.jpeg');
-        //const localFilePath = '/Users/harish/Desktop/application/ivory-acceptance-tests/features/testFile/Ivory1.jpeg';
-        //$('input[type="file"]').setValue(localFilePath);
-        //browser.uploadFile(localFilePath);
         const fileUpload = $('#photograph');
         const filePath = path.join('Ivory1.jpeg');
-        //fileUpload.waitForDisplayed(2000);
-        //fileUpload.setValue(filePath);
-        //const remoteFilePath = browser.uploadFile(filePath);
         fileUpload.chooseFile(filePath);
-
     });
 
     Then('I should be presented with this is your photo page', function () {

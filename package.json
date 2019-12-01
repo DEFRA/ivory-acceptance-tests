@@ -21,7 +21,7 @@
     "lodash": "^4.17.15",
     "path": "0.12.7",
     "request": "2.81.0",
-    "selenium-standalone": "^5.9.1",
+    "selenium-standalone": "^6.17.0",
     "wdio-browserstack-service": "0.1.11",
     "wdio-firefox-profile-service": "0.0.3",
     "wdio-junit-reporter": "^0.4.4",
