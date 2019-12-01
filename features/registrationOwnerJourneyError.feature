@@ -63,8 +63,8 @@ Feature: Registration Journey
      Then I should be presented with summary page
      And click Confirm and continue button
      Then I should be presented with payments page
-     When click Continue button
-     Then I should see error message in payments page
+#     When click Continue button
+#     Then I should see error message in payments page
      When I enter valid details
      And click Continue button
      Then I should be presented with payment confirm page
