@@ -1,9 +1,6 @@
 {
   "name": "ivory-acceptance-tests",
   "version": "1.0.0",
-  "engines": {
-    "node": "6.17.1"
-  },
   "description": "Acceptance tests project template",
   "private": true,
   "main": "index.js",
@@ -25,10 +22,10 @@
     "path": "0.12.7",
     "request": "2.81.0",
     "selenium-standalone": "^5.9.1",
-    "wdio-selenium-standalone-service": "^0.0.7",
     "wdio-browserstack-service": "0.1.11",
     "wdio-firefox-profile-service": "0.0.3",
     "wdio-junit-reporter": "^0.4.4",
+    "wdio-selenium-standalone-service": "0.0.12",
     "wdio-spec-reporter": "0.1.0",
     "webdriverio": "4.8.0",
     "winston": "2.3.1"
