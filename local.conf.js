@@ -39,10 +39,16 @@ const localConfig = {
     services: ['selenium-standalone'],
     seleniumLogs: './logs/selenium',
     seleniumArgs: {
-        version: '3.4.0'
+     drivers: {
+      chrome: { version: '78.0.1' },
+      firefox: { version: '0.25.0' },
+    }
     }, // latest is 3.8.1 but this can cause issues
     seleniumInstallArgs: {
-        version: '3.4.0'
+      drivers: {
+      chrome: { version: '78.0.1' },
+      firefox: { version: '0.25.0' },
+    }
     }
 };
 exports.config = lodash.defaultsDeep(localConfig, commonConfig);
