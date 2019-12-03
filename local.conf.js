@@ -11,10 +11,7 @@ const localConfig = {
     capabilities: [
         {
             browserName: 'chrome',
-            maxInstances: 3,
-            chromeOptions: {
-                args: ['--no-sandbox']
-            }
+            maxInstances: 3
         }
     ],
 
@@ -32,18 +29,18 @@ const localConfig = {
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
     services: ['selenium-standalone'],
-    seleniumLogs: './logs/selenium'
-    // seleniumArgs: {
-    //  drivers: {
-    //   chrome: { version: '78.0.3904.105' },
-    //   firefox: { version: '0.25.0' },
-    // }
-    // }, // latest is 3.8.1 but this can cause issues
-    // seleniumInstallArgs: {
-    //   drivers: {
-    //   chrome: { version: '78.0.3904.105' },
-    //   firefox: { version: '0.25.0' },
-    // }
-    // }
+    seleniumLogs: './logs/selenium',
+    seleniumArgs: {
+     drivers: {
+      chrome: { version: '78.0.3904.105' },
+      firefox: { version: '0.25.0' },
+    }
+    }, // latest is 3.8.1 but this can cause issues
+    seleniumInstallArgs: {
+      drivers: {
+      chrome: { version: '78.0.3904.105' },
+      firefox: { version: '0.25.0' },
+    }
+    }
 };
 exports.config = lodash.defaultsDeep(localConfig, commonConfig);
