@@ -8,6 +8,7 @@
     "start": "selenium-standalone start",
     "selenium": "selenium-standalone",
     "test": "./node_modules/.bin/wdio ./local.conf.js",
+    "jenkinstest": "./node_modules/.bin/wdio ./jenkins.conf.js",
     "test:chrome-desktop-test": "node node_modules/cucumber/bin/cucumber.js ./features/ -p chrome-desktop-test -f json:./features/reports/cucumber_report_desktop.json",
     "ci": "./node_modules/.bin/wdio ./jenkins.conf.js",
     "bstest": "./node_modules/.bin/wdio ./browserstack.conf.js",

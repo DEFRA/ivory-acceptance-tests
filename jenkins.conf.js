@@ -56,24 +56,24 @@ const localConfig = {
         // Without this, the Firefox driver will respond with BAD REQUEST to all calls.
         'webdriver_firefox_allowed_hosts': 'localhost,ip6-localhost,ip6-loopback'
     },
-    // seleniumArgs: {
-    //     version: '3.4.0'
-    // },
-    // seleniumInstallArgs: {
-    //     version: '3.4.0'
-    // }
     seleniumArgs: {
-        drivers: {
-            chrome: { version: '78.0.3904.105' },
-            firefox: { version: '0.25.0' },
-        }
-    }, // latest is 3.8.1 but this can cause issues
+        version: '3.4.0'
+    },
     seleniumInstallArgs: {
-        drivers: {
-            chrome: { version: '78.0.3904.105' },
-            firefox: { version: '0.25.0' },
-        }
+        version: '3.4.0'
     }
+    // seleniumArgs: {
+    //     drivers: {
+    //         chrome: { version: '78.0.3904.105' },
+    //         firefox: { version: '0.25.0' },
+    //     }
+    // }, // latest is 3.8.1 but this can cause issues
+    // seleniumInstallArgs: {
+    //     drivers: {
+    //         chrome: { version: '78.0.3904.105' },
+    //         firefox: { version: '0.25.0' },
+    //     }
+    // }
 
 };
 exports.config = lodash.defaultsDeep(localConfig, commonConfig);
