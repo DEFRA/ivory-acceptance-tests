@@ -30,19 +30,17 @@ const localConfig = {
     // commands. Instead, they hook themselves up into the test process.
     services: ['selenium-standalone'],
     seleniumLogs: './logs/selenium',
-    seleniumInstallArgs: {
-        drivers: {
-            chrome: {
-                version: '77.0.3865.40',
-            }
-        }
-    },
     seleniumArgs: {
         drivers: {
-            chrome: {
-                version: '77.0.3865.40',
-            }
+            chrome: { version: '78.0.3904.105' },
+            // firefox: { version: '0.25.0' },
         }
-    },
+    }, // latest is 3.8.1 but this can cause issues
+    seleniumInstallArgs: {
+        drivers: {
+            chrome: { version: '78.0.3904.105' },
+            // firefox: { version: '0.25.0' },
+        }
+    }
 };
 exports.config = lodash.defaultsDeep(localConfig, commonConfig);
