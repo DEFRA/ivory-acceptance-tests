@@ -64,18 +64,18 @@ const localConfig = {
     // seleniumInstallArgs: {
     //     version: '3.4.0'
     // }
-    seleniumArgs: {
-        drivers: {
-            chrome: { version: '78.0.3904.105' },
-            // firefox: { version: '0.25.0' },
-        }
-    }, // latest is 3.8.1 but this can cause issues
-    seleniumInstallArgs: {
-        drivers: {
-            chrome: { version: '78.0.3904.105' },
-            // firefox: { version: '0.25.0' },
-        }
-    }
+    // seleniumArgs: {
+    //     drivers: {
+    //         chrome: { version: '78.0.3904.105' },
+    //         // firefox: { version: '0.25.0' },
+    //     }
+    // }, // latest is 3.8.1 but this can cause issues
+    // seleniumInstallArgs: {
+    //     drivers: {
+    //         chrome: { version: '78.0.3904.105' },
+    //         // firefox: { version: '0.25.0' },
+    //     }
+    // }
 
 };
 exports.config = lodash.defaultsDeep(localConfig, commonConfig);
