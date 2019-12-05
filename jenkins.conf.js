@@ -37,14 +37,14 @@ const localConfig = {
             }
         },
         basePath: './drivers' // Optionally specify the driver start location (the default is the current directory, then ./selenium)
-    }
-    // seleniumInstallArgs: {
-    //     drivers: {
-        //     chrome: {
-        //         version: '78.0.3904.105'
-        //     }
-        // }
+    },
+    seleniumInstallArgs: {
+        drivers: {
+            chrome: {
+                version: '78.0.3904.105'
+            }
+        }
         // basePath: './downloaded-drivers' // Optionally specify the driver install location (the default is the current directory, then ./selenium)
-    // }
+    }
 };
 exports.config = lodash.defaultsDeep(localConfig, commonConfig);
