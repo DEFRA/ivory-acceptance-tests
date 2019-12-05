@@ -33,12 +33,14 @@ const localConfig = {
     seleniumArgs: {
         drivers: {
             chrome: { version: '78.0.3904.105' }
-        }
+        },
+        basePath: './downloaded-drivers'
     }, // latest is 3.8.1 but this can cause issues
     seleniumInstallArgs: {
         drivers: {
             chrome: { version: '78.0.3904.105' }
-        }
+        },
+        basePath: './downloaded-drivers'
     }
 };
 exports.config = lodash.defaultsDeep(localConfig, commonConfig);
