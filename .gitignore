@@ -42,6 +42,3 @@ node_modules
 
 # Environment variables
 *.sh
-
-# Temporarily downloaded drivers
-downloaded-drivers
