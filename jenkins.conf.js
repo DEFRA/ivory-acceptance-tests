@@ -35,8 +35,8 @@ const localConfig = {
             chrome: {
                 version: '78.0.3904.105'
             }
-        },
-        basePath: './drivers' // Optionally specify the driver start location (the default is the current directory, then ./selenium)
+        }
+        // basePath: './downloaded-drivers' // Optionally specify the driver start location (the default is the current directory, then ./selenium)
     },
     seleniumInstallArgs: {
         drivers: {
