@@ -11,7 +11,8 @@ const localConfig = {
     capabilities: [
         {
             browserName: 'chrome',
-            maxInstances: 3
+            maxInstances: 3,
+            args: ['--no-sandbox']
         }
     ],
 
