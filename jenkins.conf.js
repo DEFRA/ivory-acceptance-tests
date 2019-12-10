@@ -12,7 +12,11 @@ const localConfig = {
         {
             browserName: 'chrome',
             maxInstances: 3,
-            args: ['--no-sandbox']
+            chromeOptions: {
+                args: ['--no-sandbox'],
+                // args: ['--headless', '--disable-gpu', '--window-size=1280,800']
+            }
+
         }
     ],
 
