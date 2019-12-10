@@ -10,10 +10,10 @@ const localConfig = {
     maxInstances: 1,
     capabilities: [
         {
+            // These tests need google chrome installed in it's default location on the Jenkins box: /usr/bin/google-chrome
             browserName: 'chrome',
             maxInstances: 3,
             chromeOptions: {
-                // args: ['--no-sandbox', '--disable-dev-shm-usage']
                 args: ['--headless', '--disable-gpu', '--window-size=1280,800']
             }
 
