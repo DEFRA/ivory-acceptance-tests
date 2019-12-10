@@ -13,8 +13,8 @@ const localConfig = {
             browserName: 'chrome',
             maxInstances: 3,
             chromeOptions: {
-                args: ['--no-sandbox', '--disable-dev-shm-usage']
-                // args: ['--headless', '--disable-gpu', '--window-size=1280,800']
+                // args: ['--no-sandbox', '--disable-dev-shm-usage']
+                args: ['--headless', '--disable-gpu', '--window-size=1280,800']
             }
 
         }
