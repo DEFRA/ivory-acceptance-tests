@@ -9,6 +9,7 @@ Feature: Registration Museum Journey
    Given I go to item type page
    Then I select a item type 4
    And click Continue button
+   Then I should be presented with register to museum page
 #   Then I should be presented with add photograph page
 #   When I choose file in add photograph page
 #   And click Continue button

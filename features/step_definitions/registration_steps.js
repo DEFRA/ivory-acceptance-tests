@@ -22,6 +22,7 @@ const whoOwnsItem = require('../support/pages/whoOwnsItem');
 const contactName = require('../support/pages/contactName');
 const agentAddress = require('../support/pages/agentAddress');
 const agentEmail = require('../support/pages/agentEmail');
+const registerToMuseum = require('../support/pages/registerToMuseum');
 
     Given('I go to item type page', function () {
         itemTypePage.open();
@@ -50,6 +51,11 @@ const agentEmail = require('../support/pages/agentEmail');
 
     Then('I select a item type 4', function () {
         itemTypePage.clickSomething('#itemType-4');
+
+    });
+
+    Then('I should be presented with register to museum page', function () {
+    registerToMuseum.checkOpen()
 
     });
 
