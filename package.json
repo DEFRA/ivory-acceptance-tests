@@ -8,6 +8,7 @@
     "start": "selenium-standalone start",
     "selenium": "selenium-standalone",
     "test": "./node_modules/.bin/wdio ./local.conf.js",
+    "axetest": "./node_modules/.bin/wdio ./axe.conf.js",
     "test:jenkins": "DEBUG=selenium-standalone:* ./node_modules/.bin/wdio ./jenkins.conf.js",
     "test:chrome-desktop-test": "node node_modules/cucumber/bin/cucumber.js ./features/ -p chrome-desktop-test -f json:./features/reports/cucumber_report_desktop.json",
     "ci": "./node_modules/.bin/wdio ./jenkins.conf.js",
@@ -27,11 +28,14 @@
     "wdio-junit-reporter": "^0.4.4",
     "wdio-selenium-standalone-service": "0.0.12",
     "wdio-spec-reporter": "0.1.0",
-    "webdriverio": "4.8.0",
+    "webdriverio": "^4.8.0",
     "winston": "2.3.1"
   },
   "devDependencies": {
+    "@wdio/cli": "^5.18.2",
     "@wdio/cucumber-framework": "^5.12.3",
+    "axe-webdriverio": "^0.2.0",
+    "axe-webdriverjs": "^2.3.0",
     "eslint": "^4.2.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.7.0",
