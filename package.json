@@ -8,7 +8,7 @@
     "start": "selenium-standalone start",
     "selenium": "selenium-standalone",
     "test": "./node_modules/.bin/wdio ./local.conf.js",
-    "axetest": "./node_modules/.bin/wdio ./axe.conf.js",
+    "axe": "./node_modules/.bin/wdio --spec ./features/accessibility.feature",
     "test:jenkins": "DEBUG=selenium-standalone:* ./node_modules/.bin/wdio ./jenkins.conf.js",
     "test:chrome-desktop-test": "node node_modules/cucumber/bin/cucumber.js ./features/ -p chrome-desktop-test -f json:./features/reports/cucumber_report_desktop.json",
     "ci": "./node_modules/.bin/wdio ./jenkins.conf.js",
@@ -16,6 +16,8 @@
     "lint": "./node_modules/eslint/bin/eslint.js *.js ./features/step_definitions/** ./features/support/lib/** ./features/support/pages/**"
   },
   "dependencies": {
+    "axe-core": "^2.4.2",
+    "json-to-csv": "^1.0.0",
     "chai": "4.1.0",
     "cucumber": "2.3.1",
     "fibers": "4.0.2",
