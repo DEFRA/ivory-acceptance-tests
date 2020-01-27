@@ -17,7 +17,7 @@ Feature: Registration Journey
      When I choose file in add photograph page
      And click Continue button
      Then I should be presented with this is your photo page
-     And click Use this photo
+     And click Continue button
      Then I should be presented with description page
      And click Continue button
      Then I should see error message in description page

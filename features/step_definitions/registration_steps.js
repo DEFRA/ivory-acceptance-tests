@@ -23,6 +23,7 @@ const contactName = require('../support/pages/contactName');
 const agentAddress = require('../support/pages/agentAddress');
 const agentEmail = require('../support/pages/agentEmail');
 const registerToMuseum = require('../support/pages/registerToMuseum');
+const removePhotograph = require('../support/pages/removePhotograph');
 
     Given('I go to item type page', function () {
         itemTypePage.open();
@@ -98,10 +99,47 @@ const registerToMuseum = require('../support/pages/registerToMuseum');
     fileUpload.chooseFile(filePath);
     });
 
+    When('I choose another file3 in add photograph page', function () {
+    const fileUpload = $('#photograph');
+    const filePath = path.join('image 6.jpg');
+    fileUpload.chooseFile(filePath);
+
+    });
+
+    When('I choose another file4 in add photograph page', function () {
+    const fileUpload = $('#photograph');
+    const filePath = path.join('image 9.jpg');
+    fileUpload.chooseFile(filePath);
+
+    });
+
+    When('I choose another file5 in add photograph page', function () {
+    const fileUpload = $('#photograph');
+    const filePath = path.join('Ivory1.jpeg');
+    fileUpload.chooseFile(filePath);
+
+    });
+
     Then('I should be presented with this is your photo page', function () {
         thisIsYourPhoto.checkOpen();
 
     });
+
+     When('I click remove photo link', function () {
+    thisIsYourPhoto.clickSomething('#remove-photo-1')
+
+     });
+
+     When('I click remove this photo button', function () {
+      removePhotograph.clickSomething('.govuk-button')
+
+      });
+
+    Then('I should be presented with removePhotograph page', function () {
+    removePhotograph.checkOpen();
+
+    });
+
 
     Then('click Add another Photo link', function () {
         thisIsYourPhoto.clickSomething('#add-another-photo-link')

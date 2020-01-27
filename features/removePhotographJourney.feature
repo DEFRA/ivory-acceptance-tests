@@ -1,11 +1,11 @@
 
-Feature: Add Photograph Journey
+Feature: Remove Photograph Journey
   As a tester
   I want to check the Add Photograph journey functionality
   So that I know that it works and is secure
 
 @wip
- Scenario: Add Photograph Journey
+ Scenario: Remove Photograph Journey
    Given I go to item type page
    Then I select a item type 2
    And click Continue button
@@ -15,13 +15,36 @@ Feature: Add Photograph Journey
    Then I should be presented with this is your photo page
    And click Add another Photo link
    Then I should be presented with add photograph page
-   When I choose another file in add photograph page
+   When I choose another file2 in add photograph page
+   And click Continue button
+   Then I should be presented with this is your photo page
+   And click Add another Photo link
+   Then I should be presented with add photograph page
+   When I choose another file2 in add photograph page
    And click Continue button
    Then I should be presented with this is your photo page
    And click Add another Photo link
    Then I should be presented with add photograph page
    When I choose another file3 in add photograph page
    And click Continue button
+   Then I should be presented with this is your photo page
+   And click Add another Photo link
+   Then I should be presented with add photograph page
+   When I choose another file5 in add photograph page
+   And click Continue button
+   Then I should be presented with this is your photo page
+   And click Add another Photo link
+   Then I should be presented with add photograph page
+   When I choose another file5 in add photograph page
+   And click Continue button
+   Then I should be presented with this is your photo page
+   When I click remove photo link
+   Then I should be presented with removePhotograph page
+   Then I click remove this photo button
+   Then I should be presented with this is your photo page
+   When I click remove photo link
+   Then I should be presented with removePhotograph page
+   Then I click remove this photo button
    Then I should be presented with this is your photo page
    And click Continue button
    Then I should be presented with description page

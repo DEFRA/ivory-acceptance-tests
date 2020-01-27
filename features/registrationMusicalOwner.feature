@@ -13,7 +13,7 @@ Feature: Registration Musical Instrument Owner Journey
    When I choose file in add photograph page
    And click Continue button
    Then I should be presented with this is your photo page
-   And click Use this photo
+   And click Continue button
    Then I should be presented with description page
    When I enter a description
    And click Continue button

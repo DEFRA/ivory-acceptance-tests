@@ -18,14 +18,15 @@ exports.config = {
     // Specify Test Files
     // ==================
     specs: [
-     //   './features/checkYourAnswers.feature',
-    //    './features/addPhotographJourney.feature',
-        './features/multiplePhotoJourney.feature',
-     // './features/registrationMusicalOwner.feature',
-     // './features/registrationOwnerJourneyError.feature',
-     // './features/registrationAgentJourney.feature',
-     // './features/registrationAgentJourneyError.feature',
-     // './features/registrationMuseumJourney.feature'
+        './features/checkYourAnswers.feature',
+    //     './features/addPhotographJourney.feature',
+    // //    './features/multiplePhotoJourney.feature',
+    //     './features/removePhotographJourney.feature',
+    //   './features/registrationMusicalOwner.feature',
+    //   './features/registrationOwnerJourneyError.feature',
+    //   './features/registrationAgentJourney.feature',
+    //   './features/registrationAgentJourneyError.feature',
+    //   './features/registrationMuseumJourney.feature'
     ],
     //exclude: [
       //'./features/**/registrationMusicalOwner.feature',
@@ -78,10 +79,13 @@ exports.config = {
     // Framework to run specs with.
     framework: 'cucumber',
     // Test reporter for stdout.
-    reporters: ['spec', 'junit'],
+    reporters: ['spec', 'junit', 'allure'],
     reporterOptions: {
         junit: {
             outputDir: './logs/junit'
+        },
+        allure: {
+            outputDir: './logs/allure'
         }
     },
 
