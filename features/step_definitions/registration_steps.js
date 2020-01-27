@@ -79,13 +79,32 @@ const registerToMuseum = require('../support/pages/registerToMuseum');
         fileUpload.chooseFile(filePath);
     });
 
+    When('I choose another file in add photograph page', function () {
+    const fileUpload = $('#photograph');
+    const filePath = path.join('e3f27b13-2931-4d17-86a1-89c43456f7e6.jpg');
+    fileUpload.chooseFile(filePath);
+    });
+
+    When('I choose multiple file in add photograph page', function () {
+    const fileUpload = $('#photograph');
+    const filePath = path.join('e3f27b13-2931-4d17-86a1-89c43456f7e6.jpg, image 3.jpg, image 6.jpg, image 9.jpg, Ivory1.jpeg,');
+    fileUpload.chooseFile(filePath);
+
+    });
+
+    When('I choose another file2 in add photograph page', function () {
+    const fileUpload = $('#photograph');
+    const filePath = path.join('image 3.jpg');
+    fileUpload.chooseFile(filePath);
+    });
+
     Then('I should be presented with this is your photo page', function () {
         thisIsYourPhoto.checkOpen();
 
     });
 
-    Then('click Use this photo', function () {
-        thisIsYourPhoto.clickSomething('.govuk-button')
+    Then('click Add another Photo link', function () {
+        thisIsYourPhoto.clickSomething('#add-another-photo-link')
     });
 
     Then('I should be presented with description page', function () {
@@ -100,6 +119,11 @@ const registerToMuseum = require('../support/pages/registerToMuseum');
 
     When('I enter a description', function () {
         itemDescPage.enterFormText('#item-description','Automation Functional Test')
+
+    });
+
+    When('I change the description', function () {
+    itemDescPage.enterFormText('#item-description','Automation Functional Test for change links')
 
     });
 
@@ -270,8 +294,47 @@ const registerToMuseum = require('../support/pages/registerToMuseum');
 
     Then('I should be presented with summary page', function () {
         checkYourAnswer.checkOpen();
+    });
+
+    When('I click on Item type Change button', function () {
+        checkYourAnswer.clickSomething('#change-item-type');
 
     });
+
+    When('I click on Item description Change button', function () {
+         checkYourAnswer.clickSomething('#change-item-description');
+
+      });
+
+     When('I click change photograph link', function () {
+       checkYourAnswer.clickSomething('#change-manage-photographs');
+
+     });
+
+     When('I click change who owns the item link', function () {
+       checkYourAnswer.clickSomething('#change-who-owns-item');
+
+      });
+
+     When('I click change dealing intent link', function () {
+       checkYourAnswer.clickSomething('#change-dealing-intent');
+
+     });
+
+     When('I click change your name link', function () {
+       checkYourAnswer.clickSomething('#change-owner-name');
+
+      });
+
+     When('I click change item age declaration link', function () {
+         checkYourAnswer.clickSomething('#change-item-age-exemption-declaration');
+
+      });
+
+     When('I click change owner address link', function () {
+        checkYourAnswer.clickSomething('#change-owner-address-find');
+
+      });
 
     Then('click Confirm and continue button', function () {
         itemTypePage.clickSomething('.govuk-button');

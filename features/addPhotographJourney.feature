@@ -1,16 +1,26 @@
 
-Feature: Registration Agent Journey
+Feature: Add Photograph Journey
   As a tester
-  I want to check the Registration Agent journey functionality
+  I want to check the Add Photograph journey functionality
   So that I know that it works and is secure
 
 @wip
- Scenario: Registration Agent Journey
+ Scenario: Add Photograph Journey
    Given I go to item type page
    Then I select a item type 2
    And click Continue button
    Then I should be presented with add photograph page
    When I choose file in add photograph page
+   And click Continue button
+   Then I should be presented with this is your photo page
+   And click Add another Photo link
+   Then I should be presented with add photograph page
+   When I choose another file in add photograph page
+   And click Continue button
+   Then I should be presented with this is your photo page
+   And click Add another Photo link
+   Then I should be presented with add photograph page
+   When I choose another file2 in add photograph page
    And click Continue button
    Then I should be presented with this is your photo page
    And click Continue button

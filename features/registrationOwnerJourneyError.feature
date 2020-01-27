@@ -17,7 +17,7 @@ Feature: Registration Journey
      When I choose file in add photograph page
      And click Continue button
      Then I should be presented with this is your photo page
-     And click Use this photo
+     And click Continue button
      Then I should be presented with description page
      And click Continue button
      Then I should see error message in description page
@@ -62,9 +62,6 @@ Feature: Registration Journey
      And click Continue button
      Then I should be presented with summary page
      And click Confirm and continue button
-     Then I should be presented with payments page
-#     When click Continue button
-#     Then I should see error message in payments page
      When I enter valid details
      And click Continue button
      Then I should be presented with payment confirm page

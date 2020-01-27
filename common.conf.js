@@ -18,11 +18,14 @@ exports.config = {
     // Specify Test Files
     // ==================
     specs: [
-     './features/registrationMusicalOwner.feature',
-     './features/registrationOwnerJourneyError.feature',
-     './features/registrationAgentJourney.feature',
-     './features/registrationAgentJourneyError.feature',
-     './features/registrationMuseumJourney.feature'
+     //   './features/checkYourAnswers.feature',
+    //    './features/addPhotographJourney.feature',
+        './features/multiplePhotoJourney.feature',
+     // './features/registrationMusicalOwner.feature',
+     // './features/registrationOwnerJourneyError.feature',
+     // './features/registrationAgentJourney.feature',
+     // './features/registrationAgentJourneyError.feature',
+     // './features/registrationMuseumJourney.feature'
     ],
     //exclude: [
       //'./features/**/registrationMusicalOwner.feature',
