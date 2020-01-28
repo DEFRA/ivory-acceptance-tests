@@ -87,8 +87,15 @@ const removePhotograph = require('../support/pages/removePhotograph');
     });
 
     When('I choose multiple file in add photograph page', function () {
-    const fileUpload = $('#photograph');
-    const filePath = path.join('e3f27b13-2931-4d17-86a1-89c43456f7e6.jpg, image 3.jpg, image 6.jpg, image 9.jpg, Ivory1.jpeg,');
+        browser.uploadFile('e3f27b13-2931-4d17-86a1-89c43456f7e6.jpg');
+        browser.uploadFile('image 3.jpg');
+        browser.uploadFile('image 6.jpg');
+        browser.uploadFile('image 9.jpeg');
+        browser.uploadFile('Ivory1.jpeg');
+      //  browser.addValue('#photograph', 'e3f27b13-2931-4d17-86a1-89c43456f7e6.jpg' + '\n' + 'image 3.jpg' + '\n' + 'image 6.jpg' + '\n' + 'image 9.jpeg' + '\n' + 'Ivory1.jpeg' );
+
+    // const fileUpload = $('#photograph');
+    // const filePath = path.join('e3f27b13-2931-4d17-86a1-89c43456f7e6.jpg, image 3.jpg, image 6.jpg, image 9.jpg, Ivory1.jpeg,');
     fileUpload.chooseFile(filePath);
 
     });

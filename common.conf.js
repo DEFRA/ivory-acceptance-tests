@@ -19,14 +19,14 @@ exports.config = {
     // ==================
     specs: [
         './features/checkYourAnswers.feature',
-    //     './features/addPhotographJourney.feature',
-    // //    './features/multiplePhotoJourney.feature',
-    //     './features/removePhotographJourney.feature',
-    //   './features/registrationMusicalOwner.feature',
-    //   './features/registrationOwnerJourneyError.feature',
-    //   './features/registrationAgentJourney.feature',
-    //   './features/registrationAgentJourneyError.feature',
-    //   './features/registrationMuseumJourney.feature'
+        './features/addPhotographJourney.feature',
+    //    './features/multiplePhotoJourney.feature',
+        './features/removePhotographJourney.feature',
+        './features/registrationMusicalOwner.feature',
+        './features/registrationOwnerJourneyError.feature',
+        './features/registrationAgentJourney.feature',
+        './features/registrationAgentJourneyError.feature',
+        './features/registrationMuseumJourney.feature'
     ],
     //exclude: [
       //'./features/**/registrationMusicalOwner.feature',
